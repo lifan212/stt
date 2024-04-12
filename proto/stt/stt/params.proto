@@ -1,0 +1,15 @@
+syntax = "proto3";
+package stt.stt;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "stt/x/stt/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "stt/x/stt/Params";
+  option (gogoproto.equal) = true;
+
+  
+}

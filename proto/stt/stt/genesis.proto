@@ -1,0 +1,17 @@
+syntax = "proto3";
+package stt.stt;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "stt/stt/params.proto";
+
+option go_package = "stt/x/stt/types";
+
+// GenesisState defines the stt module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}
